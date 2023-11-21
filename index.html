@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      s = new EventSource("/s");
+      s.onmessage = () => location.reload();
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <!-- link untuk icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- link asset css -->
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+
+    <!-- Penamaan Browser -->
+    <link rel="shortcut icon" href="assets\img\task.png" type="image/x-icon" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <!-- Penamaan Judul Website -->
+    <header>
+      <div>
+        <h1 class="h1_header">
+          Ulangan Penilaian Akhir Semester 1 <br><div class="changecolorred">Javasript</div>
+        </h1>
+      </div>
+    </header>
+
+    <div class="body_box">
+      <!-- To Do List Versi 3D -->
+      <div class="setbox">
+        <div class="newcontainer">
+          <div class="box">
+            <h2>To Do List</h2> 
+            <input type="text" placeholder="Tulis disini..." id="inputBx" /> <!-- tempat input data -->
+            <button class="btnAdd" id="add">Add</button> <!-- button mengirim data (bisa juga diklik "enter" dikeyboard [Opsional])-->
+            <ul id="list"></ul> <!-- tempat menampilkan to do data -->
+          </div>
+        </div>
+        <h3>(3 Dimensi)</h3>
+      </div>
+
+      <!-- To Do List Classic -->
+      <div class="setbox">
+        <div class="container">
+          <h1 class="h1new">Todo List</h1>
+          <div class="input-container">
+            <input
+              type="text"
+              class="todo-input"
+              placeholder="Tuliskan Tugas baru ..."
+              id="inputme"
+            /> <!-- tempat input data (classic) -->
+            <button class="add-button" id="nyong">
+              <i class="fa-solid fa-circle-plus"></i>  <!-- button mengirim data (bisa juga diklik "enter" dikeyboard [Opsional])-->
+            </button>
+          </div>
+          <div class="filters">
+            <div class="filter" data-filter="completed">Complete</div> <!-- button digunakan untuk menampilkan list yang sudah dikerjakan -->
+            <div class="filter" data-filter="pending">Incomplete</div> <!-- button digunakan untuk menampilkan list yang belum dikerjakan -->
+            <div class="delete-all">Delete All</div> <!-- button digunakan untuk menhapus semua data -->
+          </div>
+          <div class="todos-container"> <!-- tempat menampilkan list -->
+            <ul class="todos"></ul>
+            <img
+              src="assets/img/11436090_4707021.svg"
+              class="empty-image"
+              alt="Tasking_IMG"
+            /> <!-- gambar akan muncul ketika belum ada list yang ditunjukan -->
+          </div>
+        </div>
+        <h3>Classic</h3>
+      </div>
+    </div>
+    <script src="assets/script.js"></script> <!-- Link asset JavaScript -->
+  </body>
+</html>
